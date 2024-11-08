@@ -10,26 +10,28 @@
     />
   </head>
 
-  <body class="font-sans text-gray-800">
-    <header class="bg-gray-900 text-white py-12 md:py-20">
+  <body class="font-sans text-gray-800 bg-gray-50">
+    <header
+      class="bg-gradient-to-r from-gray-900 to-blue-800 text-white py-12 md:py-20"
+    >
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-center">
           Empowering Sensory Health for the Elderly with AI
         </h1>
-        <p class="text-xl md:text-2xl mb-8">
+        <p class="text-lg md:text-xl mb-8 text-center">
           Monitor, Diagnose, and Support Aging Senses with AI-Driven Precision.
         </p>
         <div
           class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
         >
           <a
-            href="#"
-            class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg"
+            href="#demo"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105"
             >Get Started</a
           >
           <a
             href="#"
-            class="bg-transparent hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg border border-gray-700"
+            class="bg-transparent hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg border border-gray-700 transition duration-300 transform hover:scale-105"
             >Learn More</a
           >
         </div>
@@ -38,11 +40,13 @@
 
     <section class="py-12 md:py-20 bg-gray-100">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
           Tackling the Challenge of Sensory Decline
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          >
             <h3 class="text-2xl font-bold mb-4">
               Prevalence of Sensory Decline
             </h3>
@@ -52,26 +56,30 @@
             </p>
             <div class="flex justify-center">
               <img
-                src="data:image/jpeg;base64,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"
+                src="/static/old-man.jpeg"
                 alt="Sensory Decline Statistics"
-                class="w-full h-auto"
+                class="w-full h-auto rounded-lg shadow-md"
               />
             </div>
           </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          >
             <h3 class="text-2xl font-bold mb-4">Impact on Daily Life</h3>
             <p class="mb-4">
               Unaddressed sensory impairments can increase fall risk by 50%.
             </p>
             <div class="flex justify-center">
               <img
-                src="https://media.istockphoto.com/id/1480604265/video/senior-man-is-having-knee-pain-in-the-park.jpg?s=640x640&k=20&c=56jNEMJ7zNo2xjL3y98ybND_iXjHO1nTH0c_2TUmvf4="
+                src="/static/couple.jpg"
                 alt="Impact on Daily Life"
-                class="w-full h-auto"
+                class="w-full h-auto rounded-lg shadow-md"
               />
             </div>
           </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          >
             <h3 class="text-2xl font-bold mb-4">Early Detection Benefits</h3>
             <p class="mb-4">
               Early detection of sensory health issues can improve outcomes by
@@ -79,9 +87,9 @@
             </p>
             <div class="flex justify-center">
               <img
-                src="https://media.istockphoto.com/id/1403523137/photo/serious-gp-doctor-showing-tablet-screen-to-old-female-patient.jpg?s=612x612&w=0&k=20&c=CwYHbncsTjJjBdiQaarsIfWFw_62zhuWU9fxPRC_Rf4="
+                src="/static/consult.jpg"
                 alt="Early Detection Benefits"
-                class="w-full h-auto"
+                class="w-full h-auto rounded-lg shadow-md"
               />
             </div>
           </div>
@@ -91,9 +99,13 @@
 
     <section class="py-12 md:py-20">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">Key Features</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Key Features
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          >
             <div class="flex items-center mb-4">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/4021/4021687.png"
@@ -109,10 +121,12 @@
               the sensory organs.
             </p>
           </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          >
             <div class="flex items-center mb-4">
               <img
-                src="data:image/png;base64,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"
+                src="/static/meter.png"
                 alt="Condition Severity"
                 class="mr-4"
                 width="40px"
@@ -125,10 +139,12 @@
               "Severe" to help you understand the seriousness.
             </p>
           </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          >
             <div class="flex items-center mb-4">
               <img
-                src="data:image/png;base64,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"
+                src="/static/gear.png"
                 alt="Personalized Recommendations"
                 class="mr-4"
                 width="40px"
@@ -141,7 +157,9 @@
               and exercises to maintain your sensory health.
             </p>
           </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          >
             <div class="flex items-center mb-4">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/3475/3475848.png"
@@ -157,7 +175,9 @@
               images and reviewing personalized reports.
             </p>
           </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          >
             <div class="flex items-center mb-4">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/4660/4660672.png"
@@ -173,7 +193,9 @@
               voice navigation and larger text options.
             </p>
           </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
+          <div
+            class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          >
             <div class="flex items-center mb-4">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/735/735200.png"
@@ -193,9 +215,9 @@
       </div>
     </section>
 
-    <section class="py-12 md:py-20 bg-gray-100">
+    <section class="py-12 md:py-20 bg-gray-100" id="demo">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
           Try Our Interactive Demo
         </h2>
         <div class="bg-white shadow-lg rounded-lg p-6">
@@ -216,158 +238,66 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Eye Card -->
             <div
-              class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center"
+              class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center transition-transform transform hover:scale-105"
             >
-              <img
-                src="../static/eye.png"
-                alt="Eye"
-                class="w-20 h-20 mb-4"
-              />
+              <img src="../static/eye.png" alt="Eye" class="w-20 h-20 mb-4" />
               <h3 class="text-lg font-semibold mb-2">Eye</h3>
               <p class="text-center text-gray-600 mb-4">
                 Upload an image to assess eye health.
               </p>
               <a
                 href="/eye"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300"
                 >Try Demo</a
               >
             </div>
 
             <!-- Nose Card -->
             <div
-              class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center"
+              class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center transition-transform transform hover:scale-105"
             >
-              <img
-                src="../static/nose.png"
-                alt="Nose"
-                class="w-20 h-20 mb-4"
-              />
+              <img src="../static/nose.png" alt="Nose" class="w-20 h-20 mb-4" />
               <h3 class="text-lg font-semibold mb-2">Nose</h3>
               <p class="text-center text-gray-600 mb-4">
                 Upload an image to assess nasal health.
               </p>
               <a
                 href="/nose"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300"
                 >Try Demo</a
               >
             </div>
 
             <!-- Skin Card -->
             <div
-              class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center"
+              class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center transition-transform transform hover:scale-105"
             >
-              <img
-                src="../static/skin.png"
-                alt="Skin"
-                class="w-20 h-20 mb-4"
-              />
+              <img src="../static/skin.png" alt="Skin" class="w-20 h-20 mb-4" />
               <h3 class="text-lg font-semibold mb-2">Skin</h3>
               <p class="text-center text-gray-600 mb-4">
                 Upload an image to assess skin health.
               </p>
               <a
                 href="/skin"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300"
                 >Try Demo</a
               >
             </div>
 
             <!-- Ear Card -->
             <div
-              class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center"
+              class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center transition-transform transform hover:scale-105"
             >
-              <img
-                src="../static/ear.png"
-                alt="Ear"
-                class="w-20 h-20 mb-4"
-              />
+              <img src="../static/ear.png" alt="Ear" class="w-20 h-20 mb-4" />
               <h3 class="text-lg font-semibold mb-2">Ear</h3>
               <p class="text-center text-gray-600 mb-4">
                 Upload an image to assess ear health.
               </p>
               <a
                 href="/ear"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300"
                 >Try Demo</a
               >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-12 md:py-20">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">What Our Users Say</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <blockquote class="mb-4">
-              <p class="text-lg">
-                "This platform has been a game-changer for my sensory health.
-                The AI-powered diagnosis is accurate and the personalized
-                recommendations have helped me maintain my vision and hearing."
-              </p>
-            </blockquote>
-            <div class="flex items-center">
-              <img
-                src="https://static-00.iconduck.com/assets.00/user-icon-1024x1024-dtzturco.png"
-                alt="User Avatar"
-                class="rounded-full mr-4"
-                width="40px"
-                height="40px"
-              />
-              <div>
-                <h4 class="font-bold">John Doe</h4>
-                <p class="text-gray-500">Retired, 72 years old</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <blockquote class="mb-4">
-              <p class="text-lg">
-                "As someone who struggles with vision impairment, I was hesitant
-                to try an online platform. But the Sensory Health app has been a
-                lifesaver, making it easy for me to monitor my condition and get
-                the support I need."
-              </p>
-            </blockquote>
-            <div class="flex items-center">
-              <img
-                src="https://static-00.iconduck.com/assets.00/user-icon-1024x1024-dtzturco.png"
-                alt="User Avatar"
-                class="rounded-full mr-4"
-                width="40px"
-                height="40px"
-              />
-              <div>
-                <h4 class="font-bold">Jane Smith</h4>
-                <p class="text-gray-500">Homemaker, 68 years old</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <blockquote class="mb-4">
-              <p class="text-lg">
-                "I was surprised by how accurate the AI diagnosis was. The
-                platform provided me with practical exercises and tips to
-                improve my hearing, and I've noticed a significant difference in
-                my daily life."
-              </p>
-            </blockquote>
-            <div class="flex items-center">
-              <img
-                src="https://static-00.iconduck.com/assets.00/user-icon-1024x1024-dtzturco.png"
-                alt="User Avatar"
-                class="rounded-full mr-4"
-                width="40px"
-                height="40px"
-              />
-              <div>
-                <h4 class="font-bold">Michael Johnson</h4>
-                <p class="text-gray-500">Retired, 75 years old</p>
-              </div>
             </div>
           </div>
         </div>
@@ -379,7 +309,7 @@
         class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center"
       >
         <div class="mb-4 md:mb-0">
-          <p>&copy; 2023 Sensory Health. All rights reserved.</p>
+          <p>&copy; 2024 Sensory Health. All rights reserved.</p>
         </div>
         <div class="flex space-x-4">
           <a href="#" class="hover:text-gray-400">Privacy Policy</a>
