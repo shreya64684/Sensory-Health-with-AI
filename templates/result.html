@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detection Results</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .custom-shadow {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <nav class="bg-white py-4 px-6 custom-shadow">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-red-700"
+          >Food Safety Detection</a
+        >
+        <ul class="flex space-x-6">
+          <li>
+            <a
+              href="{{ url_for('index') }}"
+              class="text-gray-700 hover:text-red-700 font-medium"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{ url_for('ingredient_analysis') }}"
+              class="text-gray-700 hover:text-red-700 font-medium"
+              >Ingredient Analysis</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mx-auto mt-10">
+      <h1 class="text-center text-4xl font-bold text-red-700">
+        Detection Results
+      </h1>
+
+      <div class="mt-6">
+        <h2 class="text-xl font-semibold text-red-600">Detected Additives:</h2>
+        {% if harmful_status and harmful_status | length > 0 %}
+        <ul class="mt-4">
+          {% for status in harmful_status %}
+          <li class="bg-white p-3 border border-gray-300 rounded-lg shadow-sm">
+            {{ status }}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="mt-2 text-green-600">{{ result_message }}</p>
+        {% endif %}
+      </div>
+
+      <div class="mt-8">
+        <h2 class="text-xl font-semibold text-red-600">Raw Text from Image:</h2>
+        <p class="bg-white p-3 border border-gray-300 rounded-lg shadow-sm">
+          {{ raw_text }}
+        </p>
+      </div>
+
+      <!-- Button Group for Navigation -->
+      <div
+        class="container mx-auto flex justify-between items-center mt-12 px-4 space-x-6"
+      >
+        <a
+          href="{{ url_for('additive_detection') }}"
+          class="bg-red-700 text-white py-2 px-4 rounded-lg hover:bg-red-800"
+          >Try Another Image</a
+        >
+        <a
+          href="https://resilient-git-nlxjhl.sandbox.livekit.io/"
+          class="bg-green-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-green-700 transition duration-300 transform hover:scale-105"
+        >
+          Ask the Expert
+        </a>
+        <a
+          href="{{ url_for('index') }}"
+          class="bg-blue-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-105"
+        >
+          Go Back
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

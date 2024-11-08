@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ear Disease Detection Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .result-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        .result-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            position: absolute;
+            top: -90px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 50%;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .result-good {
+            color: #28a745;
+        }
+        .result-warning {
+            color: #ffc107;
+        }
+        .result-danger {
+            color: #dc3545;
+        }
+        .severity-badge {
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .result-details {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-container">
+            {% if predicted_class == 0 %}
+                <div class="result-icon result-good">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <span class="badge bg-success severity-badge">No Disease Detected</span>
+                <div class="result-details text-success">
+                    <h4>Healthy Condition</h4>
+                    <p>Your eye appears to be in good health. No signs of disease detected.</p>
+                </div>
+            {% elif predicted_class == 1 %}
+                <div class="result-icon result-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <span class="badge bg-warning severity-badge">Mild Condition</span>
+                <div class="result-details text-warning">
+                    <h4>Mild Ear Condition</h4>
+                    <p>Some minor signs of potential ear health issues detected. Recommend follow-up.</p>
+                </div>
+            {% elif predicted_class == 2 %}
+                <div class="result-icon result-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <span class="badge bg-warning severity-badge">Moderate Condition</span>
+                <div class="result-details text-warning">
+                    <h4>Moderate Ear Condition</h4>
+                    <p>Notable signs of ear health concerns. Professional consultation advised.</p>
+                </div>
+            {% else %}
+                <div class="result-icon result-danger">
+                    <i class="fas fa-times-circle"></i>
+                </div>
+                <span class="badge bg-danger severity-badge">Severe Condition</span>
+                <div class="result-details text-danger">
+                    <h4>Severe Ear Condition</h4>
+                    <p>Significant signs of ear health issues. Immediate medical attention recommended.</p>
+                </div>
+            {% endif %}
+
+            <div class="action-buttons">
+                <a href="/" class="btn btn-primary">
+                    <i class="fas fa-upload me-2"></i>Upload Another Image
+                </a>
+                <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#consultModal">
+                    <i class="fas fa-stethoscope me-2"></i>Consult Expert
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consultation Modal -->
+    <div class="modal fade" id="consultModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Expert Consultation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info">
+                        <strong>Recommended Next Steps:</strong>
+                        <ul class="mt-2">
+                            <li>Schedule an appointment with an ENT Specialist</li>
+                            <li>Bring a copy of this detection result</li>
+                            <li>Prepare a list of any symptoms you're experiencing</li>
+                        </ul>
+                    </div>
+                    <div class="contact-info">
+                        <h6>Contact Medical Support:</h6>
+                        <p>
+                            <i class="fas fa-phone me-2"></i>Emergency Helpline: +1 (555) 123-4567<br>
+                            <i class="fas fa-envelope me-2"></i>Email: medical.support@earclinic.com
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
